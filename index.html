@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calinan National High School student information collection portal.">
+  <title>CNHS | Student Data Collection</title>
+  <style>
+    :root { --green:#075b2a; --deep:#06451f; --gold:#f4d34e; --pale:#f3f8f1; --ink:#18231b; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:#f4f6f4; line-height:1.6; }
+    header { background:var(--green); color:white; border-bottom:5px solid var(--gold); }
+    .header-inner { max-width:1100px; margin:auto; padding:16px 22px; display:flex; align-items:center; gap:18px; }
+    .logo { width:92px; height:92px; object-fit:contain; flex-shrink:0; background:#fff; border-radius:50%; padding:3px; }
+    .school-name { margin:0; font-size:clamp(1.15rem, 3vw, 1.8rem); line-height:1.25; }
+    .tagline { margin:5px 0 0; color:#f8f3d6; font-size:.95rem; }
+    nav { background:var(--deep); }
+    nav .nav-inner { max-width:1100px; margin:auto; display:flex; flex-wrap:wrap; gap:6px; padding:8px 18px; }
+    nav a { color:white; text-decoration:none; padding:8px 12px; border-radius:5px; }
+    nav a:hover, nav a:focus { background:#197642; outline:2px solid var(--gold); }
+    main { max-width:1000px; margin:30px auto; padding:0 18px 28px; }
+    .hero { background:linear-gradient(135deg,#e9f5e9,#fff); border-left:6px solid var(--green); padding:24px; border-radius:10px; }
+    h2 { color:var(--green); margin-top:0; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin-top:20px; }
+    .card { background:white; padding:22px; border-radius:10px; box-shadow:0 3px 12px #0000000d; border:1px solid #e3e9e3; }
+    .button { display:inline-block; background:var(--green); color:white; text-decoration:none; font-weight:bold; padding:12px 18px; border-radius:6px; border:0; cursor:pointer; }
+    .button:hover { background:var(--deep); }
+    .notice { background:#fff8d9; border:1px solid #ead36d; padding:15px 18px; border-radius:8px; }
+    .form-frame { width:100%; height:850px; border:1px solid #d5ddd5; border-radius:8px; background:white; }
+    .placeholder { background:#f8faf8; border:2px dashed #a9b8aa; padding:22px; border-radius:8px; }
+    footer { background:#123d23; color:#f4f7f4; text-align:center; padding:22px 16px; font-size:.92rem; }
+    .small { font-size:.9rem; color:#4c5b50; }
+    @media(max-width:520px) { .header-inner{align-items:flex-start; gap:12px; padding:14px;} .logo{width:68px;height:68px;} .tagline{font-size:.82rem;} .form-frame{height:900px;} }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <div class="header-inner">
+      <img class="logo" src="assets/cnhs-logo.png" alt="Calinan National High School official school logo">
+      <div>
+        <h1 class="school-name">CALINAN NATIONAL HIGH SCHOOL</h1>
+        <p class="tagline">Calinan, Davao City · Student Data Collection Portal</p>
+      </div>
+    </div>
+  </header>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home">Home</a>
+      <a href="#purpose">About</a>
+      <a href="#submit">Student Data Form</a>
+      <a href="#privacy">Privacy Notice</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="purpose">
+      <h2>Student Data Bank</h2>
+      <p>Welcome to the Calinan National High School student information collection portal. This page provides a convenient way for authorized school personnel to collect student information through Microsoft Forms.</p>
+      <p><strong>Important:</strong> This website is a collection portal only. Student responses are submitted to the Microsoft Form configured by the school; this static GitHub Pages website does not store student records itself.</p>
+      <a class="button" href="#submit">Open Student Data Form</a>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Purpose</h2>
+        <p>Collect student information for legitimate school administration and record-management purposes, as approved by the school.</p>
+      </section>
+      <section class="card">
+        <h2>Before submitting</h2>
+        <p>Prepare the information requested by the school. Please check spelling and details carefully before submitting the form.</p>
+      </section>
+      <section class="card">
+        <h2>Need assistance?</h2>
+        <p>Contact the school office or the designated school personnel if you have questions about the form, access, or correction of submitted information.</p>
+      </section>
+    </div>
+
+    <section class="card" id="submit" style="margin-top:20px">
+      <h2>Student Data Collection Form</h2>
+      <p>Use the embedded Microsoft Form below once the school has added its form link. If the form does not appear, use the form's direct link.</p>
+      <div class="placeholder" id="form-placeholder">
+        <p><strong>Setup required:</strong> Replace <code>https://forms.cloud.microsoft/r/WySRTtFMaG</code> in <code>index.html</code> with the embed URL from your school's Microsoft Form.</p>
+        <p>To get the embed URL: open Microsoft Forms → select your form → <strong>Collect responses</strong> or <strong>Share</strong> → choose the embed option (<code>&lt;/&gt;</code>) → copy the iframe URL and paste it into the code below.</p>
+        <p class="small">The supplied Microsoft Forms response link has been added. If the embedded form does not load, replace the iframe URL with the dedicated embed URL from Microsoft Forms.</p>
+      </div>
+      <!-- Replace the placeholder URL below with the iframe/embed URL supplied by Microsoft Forms. -->
+      <iframe class="form-frame" title="CNHS Student Data Collection Microsoft Form"
+        src="https://forms.cloud.microsoft/r/WySRTtFMaG"
+        loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+        onerror="this.style.display='none'"></iframe>
+      <p style="margin-top:16px"><a class="button" href="https://forms.cloud.microsoft/r/WySRTtFMaG" target="_blank" rel="noopener noreferrer">Open form in a new tab</a></p>
+      <p class="small">Also replace <code>https://forms.cloud.microsoft/r/WySRTtFMaG</code> with the public response link from Microsoft Forms.</p>
+    </section>
+
+    <section class="card" id="privacy" style="margin-top:20px">
+      <h2>Privacy Notice</h2>
+      <div class="notice">
+        <p><strong>Student information is confidential.</strong> Collect only information needed for an approved school purpose. Do not publish student names, addresses, contact details, learner reference numbers, or submitted responses on this public website or in a public GitHub repository.</p>
+      </div>
+      <ul>
+        <li>Before collecting data, the school should provide its approved privacy notice and identify the responsible school office or data protection contact.</li>
+        <li>Configure Microsoft Forms so only the intended respondents can access it, where appropriate, and restrict response access to authorized staff.</li>
+        <li>Do not request passwords or unnecessary sensitive personal information in the form.</li>
+        <li>Use a school-managed Microsoft account, enable appropriate account security, and limit access to response spreadsheets.</li>
+        <li>Follow the school's records-retention and data-protection procedures. Obtain any required parent/guardian consent or authorization before collecting information from minors.</li>
+      </ul>
+      <p class="small">This template is not a substitute for the school's approved privacy notice or legal review.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Calinan National High School</strong><br>
+    Calinan, Davao City<br>
+    <span>Student Data Collection Portal · For authorized school use</span>
+  </footer>
+</body>
+</html>
